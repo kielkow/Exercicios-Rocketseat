@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <button class="botao">Criar</button>
+        
+        <div id="separarBtn" class="separarBtn" style="width: 10px; height: 10px; background-color: rgb(249, 250, 250);"></div>
+    </div>
+
+    <script>
+
+        var btnCriar = document.querySelector('button.botao')
+
+        btnCriar.onclick = function criar() {
+            var divElement = document.createElement('div')
+            var boxElement = document.createElement('div')
+
+            divElement.id = 'separar'
+            divElement.className = 'separar'
+            divElement.style.width = '10px'
+            divElement.style.height = '10px'
+            divElement.style.backgroundColor = 'white'
+
+            boxElement.id = 'quadrado'
+            boxElement.className = 'quadrado'
+            boxElement.style.width = '100px'
+            boxElement.style.height = '100px'
+            boxElement.style.backgroundColor = '#A52A2A'
+
+            document.getElementsByTagName('body')[0].appendChild(boxElement)
+            document.getElementsByTagName('body')[0].appendChild(divElement)
+        }
+
+    </script>
+</body>
+
+</html>
