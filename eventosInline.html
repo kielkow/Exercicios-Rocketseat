@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+        <button onclick="clicar()">Me pressione</button>
+        <button onmouseover="mouseover()">Passe por cima de mim</button>
+        <input onkeypress="keypress()" />
+    </div>
+
+    <script>
+        function clicar(){
+            alert("Botão clicado")
+        }
+
+        function mouseover(){
+            alert("Me passou")
+        }
+
+        function keypress(){
+            alert("Pressionado")
+        }
+    </script>
+
+</body>
+</html>
