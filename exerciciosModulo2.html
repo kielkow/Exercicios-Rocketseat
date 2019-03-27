@@ -11,19 +11,29 @@
 <body>
 
     <div id="app">
+        <input type="text" name="nome" id="input">
+        <button class="adicionar">Adicionar</button>
+    
         <button class="botao">Criar</button>
-        
-        <div id="separarBtn" class="separarBtn" style="width: 10px; height: 10px; background-color: rgb(249, 250, 250);"></div>
+        <div id="separarBtn" class="separarBtn"
+            style="width: 10px; height: 10px; background-color: rgb(249, 250, 250);"></div>
+
     </div>
 
     <script>
 
         var btnCriar = document.querySelector('button.botao')
-
         btnCriar.onclick = function criar() {
             var divElement = document.createElement('div')
             var boxElement = document.createElement('div')
-
+            boxElement.onmouseover = function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return boxElement.style.backgroundColor = color
+            }
             divElement.id = 'separar'
             divElement.className = 'separar'
             divElement.style.width = '10px'
@@ -34,13 +44,43 @@
             boxElement.className = 'quadrado'
             boxElement.style.width = '100px'
             boxElement.style.height = '100px'
-            boxElement.style.backgroundColor = '#A52A2A'
+            boxElement.style.backgroundColor = '#E943F0'
 
             document.getElementsByTagName('body')[0].appendChild(boxElement)
             document.getElementsByTagName('body')[0].appendChild(divElement)
         }
 
+
+        var ul = document.createElement('ul')
+        var btnAdicionar = document.querySelector('button.adicionar')
+        btnAdicionar.onclick = function adicionar() {
+            if (document.getElementById("input").value == "") {
+
+            }
+            else{
+                var li = document.createElement('li')
+                var text = document.getElementById("input").value
+                li.innerHTML = text
+                ul.appendChild(li)
+                document.getElementsByTagName('body')[0].appendChild(ul);
+                document.getElementById("input").value = "";
+            }
+        }
+
+        var ul2 = document.createElement('ul')
+        var nomes = ["Diego", "Gabriel", "Lucas"]
+        for(var i = 0; i < nomes.length; i++){
+            var li2 = document.createElement('li')
+            li2.innerHTML = nomes[i]
+            ul2.appendChild(li2)
+        }
+        document.getElementsByTagName('body')[0].appendChild(ul2)
+        
+        
+
     </script>
+
+
 </body>
 
 </html>
