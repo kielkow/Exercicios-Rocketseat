@@ -1,5 +1,5 @@
 //Exercicio 1
-/*var checaIdade = function(idade){
+var checaIdade = function(idade){
     return new Promise(function(resolve, reject){   
 
                  if(idade >= 18){
@@ -13,14 +13,14 @@
 }
 checaIdade(15)
     .then(function (response) {
-        console.log("Maior que 18")
+        setTimeout(function(){ console.log('Maior que 18') }, 2000)
     })  //metodo chamado pelo resolve
 
     .catch(function (error) {
-        console.warn("Menor de 18")
+        setTimeout(function(){ console.log('Menor que 18') }, 2000)
     })    //metodo chamado pelo reject 
-*/
 
+/*
 //Exercicio 2 e 3
 var inputElement = document.querySelector('#app input')
 var buttonElement = document.querySelector('#app button')
@@ -59,3 +59,4 @@ function buscar() {
 }
 
 buttonElement.onclick = buscar
+*/
